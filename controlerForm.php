@@ -5,3 +5,11 @@ $dataVencimento2 = new \DateTime($dataVencimento, new \DateTimeZone(timezone:'Am
 
 var_dump($dataAtual);
 var_dump($dataVencimento2);
+
+$dataVencimento2->diff($dataAtual);
+
+if($dataDiff->invert === 0){
+    echo "Esse boleto já venceu";
+}else{
+    echo "Voce pode pagar o boleto!";
+}
